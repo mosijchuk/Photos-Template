@@ -1,0 +1,27 @@
+body[data-theme="dark"] {
+  .nav-pills .nav-link.active img,
+  .nav-pills .show > .nav-link img {
+    filter: brightness(0.4);
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+
+  .nav-pills .nav-link img {
+    filter: brightness(2);
+  }
+
+  .btn-primary:hover {
+    color: $white;
+  }
+
+  .nav-link:focus,
+  .nav-link:hover {
+    color: $dark;
+  }
+
+  .input-with-icon input {
+    color: $dark;
+  }
+}

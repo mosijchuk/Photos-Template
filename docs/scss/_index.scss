@@ -1,0 +1,141 @@
+//nav
+.navbar {
+  border-bottom: 1px solid $border;
+  height: 72px;
+  transition: height 0.3s;
+  background-color: $white;
+
+  .container {
+    height: 100%;
+  }
+}
+
+.nav-tabs {
+  border: none;
+  width: max-content;
+
+  .nav-item {
+    margin-left: 24px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    .nav-link {
+      padding: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      color: $secondary;
+      border: none;
+
+      &:hover {
+        color: $dark;
+        border: none;
+      }
+
+      &.active {
+        margin-top: 1px;
+        border: none;
+        border-bottom: 2px solid $orange;
+        color: $dark;
+        background-color: transparent;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.navbar-nav {
+  .nav-item {
+    margin-right: 24px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-link {
+  color: $secondary;
+
+  &:hover {
+    color: $dark;
+  }
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0;
+}
+
+.searchForm {
+  width: 100%;
+  max-width: 546px;
+}
+
+//side pills
+aside {
+  position: fixed;
+  -webkit-transform: translateZ(0);
+}
+
+.asideOffset {
+  margin-left: 379px;
+}
+
+//content
+.cardsWrapper {
+  margin-top: 29px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+
+  .card {
+    background-color: $white;
+    border: 1px solid $border;
+    border-radius: 8px;
+    overflow: hidden;
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 16px 24px;
+      padding-bottom: 20px;
+
+      h2 {
+        margin-bottom: 4px;
+      }
+
+      .card-description {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 8px;
+
+        &.sm {
+          margin-bottom: 32px;
+        }
+      }
+
+      .card-description.full {
+        display: inline-block;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: initial;
+        -webkit-line-clamp: auto;
+      }
+    }
+
+    footer {
+      padding: 16px;
+      border-top: 1px solid $border;
+      gap: 16px;
+    }
+  }
+}

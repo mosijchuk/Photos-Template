@@ -1,0 +1,162 @@
+@media screen and (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .space-right {
+    margin-right: 50px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .cardsWrapper {
+    grid-gap: 14px;
+  }
+
+  .asideOffset {
+    margin-left: 268px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar {
+    height: 55px;
+  }
+
+  .collapse {
+    &:not(.show) {
+      display: none !important;
+    }
+  }
+
+  .searchForm {
+    max-width: 100%;
+  }
+
+  .collapsing {
+    height: 0;
+    overflow: hidden;
+    @include transition($transition-collapse);
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    padding: 16px;
+    top: 55px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $white;
+    border-bottom: 1px solid $border;
+  }
+
+  .navbar-nav {
+    align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0;
+    margin-top: 16px;
+  }
+
+  .dropdown,
+  .dropdown-center,
+  .dropend,
+  .dropstart,
+  .dropup,
+  .dropup-center {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-toggler {
+    border: none;
+    padding: 0;
+    transition: transform 0.3s;
+    transform: rotate(-90deg);
+
+    &.collapsed {
+      transform: none;
+    }
+
+    &:focus {
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+
+  .themeSwitchWrapper {
+    position: relative;
+    bottom: inherit;
+    left: inherit;
+
+    label {
+      color: $secondary;
+    }
+  }
+
+  .content {
+    margin-top: 55px;
+  }
+
+  .cardsWrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 24px;
+  }
+
+  .cardsWrapper .card .card-body .card-description.sm {
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    padding-top: 36px;
+  }
+
+  aside {
+    position: fixed;
+    background-color: $white;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 5px 16px;
+    border-top: 1px solid $border;
+  }
+
+  .content aside .nav-pills {
+    width: 100%;
+  }
+
+  .nav-pills .nav-link {
+    padding: 4px 10px;
+    flex-direction: column;
+
+    img {
+      margin: 0;
+    }
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .asideOffset {
+    margin-left: 0;
+  }
+}

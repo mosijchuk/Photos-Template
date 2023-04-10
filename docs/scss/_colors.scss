@@ -1,0 +1,34 @@
+:root {
+  //Light theme
+  --secondary: #666666;
+  --white: #ffffff;
+  --dark: #292929;
+  --grey: #eeeeee;
+  --border: #ebebeb;
+  --orange: #ed7135;
+
+  //Dark theme
+  --secondary_dark: #a1a1a1;
+  --white_dark: #292929;
+  --dark_dark: #c4c4c4;
+  --grey_dark: #323232;
+  --border_dark: #343434;
+  --orange_dark: var(--orange);
+}
+
+body[data-theme="dark"] {
+  --secondary: var(--secondary_dark);
+  --white: var(--white_dark);
+  --dark: var(--dark_dark);
+  --grey: var(--grey_dark);
+  --border: var(--border_dark);
+  --orange: var(--orange_dark);
+}
+
+//SCSS vars
+$secondary: var(--secondary);
+$white: var(--white);
+$dark: var(--dark);
+$grey: var(--grey);
+$border: var(--border);
+$orange: var(--orange);

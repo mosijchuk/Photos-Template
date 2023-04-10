@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "browsersync": "^0.0.1-security",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify-es": "^3.0.0",
+    "node": "^19.8.1",
+    "sass": "^1.61.0"
+  },
+  "name": "djinni",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "browser-sync": "^2.29.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
