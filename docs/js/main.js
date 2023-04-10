@@ -37,7 +37,8 @@ const showMoreButtonsHandler = () => {
 };
 
 //Nav links toggle
-const navLinks = document.querySelectorAll(".nav-link");
+const navPills = document.querySelector(".nav-pills");
+const navLinks = navPills.querySelectorAll(".nav-link");
 
 navLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
