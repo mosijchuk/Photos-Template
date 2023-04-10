@@ -36,6 +36,20 @@ const showMoreButtonsHandler = () => {
   });
 };
 
+//Nav links toggle
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+    });
+
+    link.classList.add("active");
+  });
+});
+
 //Random description
 const getRandomDescription = () => {
   function getRandomNumber(from, to) {
