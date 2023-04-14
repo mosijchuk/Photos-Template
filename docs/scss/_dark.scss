@@ -1,27 +1,37 @@
-body[data-theme="dark"] {
+@mixin fixDark {
   .nav-pills .nav-link.active img,
   .nav-pills .show > .nav-link img {
     filter: brightness(0.4);
+  }
+
+  .nav-pills .nav-link:hover:not(.active) img {
+    filter: brightness(2);
   }
 
   .navbar-toggler-icon {
     filter: invert(1);
   }
 
-  .nav-pills .nav-link img {
-    filter: brightness(2);
-  }
-
   .btn-primary:hover {
-    color: $white;
+    color: var(--white);
   }
 
   .nav-link:focus,
   .nav-link:hover {
-    color: $dark;
+    color: var(--dark);
   }
 
   .input-with-icon input {
-    color: $dark;
+    color: var(--dark);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  @include fixDark;
+}
+
+@media (prefers-color-scheme: light) {
+  body[data-theme="dark"] {
+    @include fixDark;
   }
 }

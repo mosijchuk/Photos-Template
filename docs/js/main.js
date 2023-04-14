@@ -192,24 +192,26 @@ window.addEventListener("load", setThemeSwitchWrapperPosition);
 window.addEventListener("resize", setThemeSwitchWrapperPosition);
 
 //Toggle theme
-function toggleDarkMode() {
+(function toggleDarkMode() {
   const switcher = document.getElementById("themeSwitcher");
+  const switcherDescription = document.querySelector("[for=themeSwitcher]");
   const body = document.querySelector("body");
 
   if (localStorage.getItem("theme") === "dark") {
     body.setAttribute("data-theme", "dark");
     switcher.checked = true;
+    switcherDescription.textContent = "Dark theme";
   }
 
   switcher.addEventListener("change", function () {
     if (this.checked) {
       body.setAttribute("data-theme", "dark");
       localStorage.setItem("theme", "dark");
+      switcherDescription.textContent = "Dark theme";
     } else {
       body.removeAttribute("data-theme");
       localStorage.removeItem("theme");
+      switcherDescription.textContent = "System theme";
     }
   });
-}
-
-toggleDarkMode();
+})();
