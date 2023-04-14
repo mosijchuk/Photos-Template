@@ -60,8 +60,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: $white;
-    border-bottom: 1px solid $border;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
   }
 
   .navbar-nav {
@@ -106,7 +106,7 @@
     left: inherit;
 
     label {
-      color: $secondary;
+      color: var(--secondary);
     }
   }
 
@@ -131,13 +131,13 @@
 
   aside {
     position: fixed;
-    background-color: $white;
+    background-color: var(--white);
     bottom: 0;
     left: 0;
     width: 100%;
     z-index: 999;
     padding: 5px 16px;
-    border-top: 1px solid $border;
+    border-top: 1px solid var(--border);
   }
 
   .content aside .nav-pills {

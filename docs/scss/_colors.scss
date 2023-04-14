@@ -1,34 +1,51 @@
+//Main root
 :root {
-  //Light theme
   --secondary: #666666;
   --white: #ffffff;
   --dark: #292929;
   --grey: #eeeeee;
   --border: #ebebeb;
   --orange: #ed7135;
-
-  //Dark theme
-  --secondary_dark: #a1a1a1;
-  --white_dark: #292929;
-  --dark_dark: #c4c4c4;
-  --grey_dark: #323232;
-  --border_dark: #343434;
-  --orange_dark: var(--orange);
 }
 
-body[data-theme="dark"] {
-  --secondary: var(--secondary_dark);
-  --white: var(--white_dark);
-  --dark: var(--dark_dark);
-  --grey: var(--grey_dark);
-  --border: var(--border_dark);
-  --orange: var(--orange_dark);
+//Bs colors
+$primary: #ed7135;
+$secondary: #666666;
+$white: #ffffff;
+$gray: #eeeeee;
+$dark: #292929;
+
+//Bs
+$body-font-size: 16px;
+$card-spacer-y: 16px;
+$card-spacer-x: 24px;
+$btn-padding-x: 16px;
+$nav-link-padding-x: 12px;
+$body-color: #292929;
+$btn-color: #ffffff;
+$btn-hover-color: #ffffff;
+$btn-primary-color: #ffffff;
+$nav-link-color: #666666;
+$link-hover-color: #292929;
+
+@mixin darkColors {
+  --secondary: #a1a1a1;
+  --white: #292929;
+  --dark: #c4c4c4;
+  --grey: #323232;
+  --border: #343434;
+  --orange: #ed7135;
 }
 
-//SCSS vars
-$secondary: var(--secondary);
-$white: var(--white);
-$dark: var(--dark);
-$grey: var(--grey);
-$border: var(--border);
-$orange: var(--orange);
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include darkColors;
+  }
+}
+
+//Hard set dark mode
+@media (prefers-color-scheme: light) {
+  body[data-theme="dark"] {
+    @include darkColors;
+  }
+}

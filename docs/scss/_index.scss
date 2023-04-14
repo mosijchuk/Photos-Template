@@ -1,9 +1,9 @@
 //nav
 .navbar {
-  border-bottom: 1px solid $border;
+  border-bottom: 1px solid var(--border);
   height: 72px;
   transition: height 0.3s;
-  background-color: $white;
+  background-color: var(--white);
 
   .container {
     height: 100%;
@@ -26,19 +26,19 @@
       height: 100%;
       display: flex;
       align-items: center;
-      color: $secondary;
+      color: var(--secondary);
       border: none;
 
       &:hover {
-        color: $dark;
+        color: var(--dark);
         border: none;
       }
 
       &.active {
         margin-top: 1px;
         border: none;
-        border-bottom: 2px solid $orange;
-        color: $dark;
+        border-bottom: 2px solid var(--orange);
+        color: var(--dark);
         background-color: transparent;
         font-weight: 700;
       }
@@ -58,10 +58,10 @@
 
 .navbar-nav .nav-link.active,
 .navbar-nav .show > .nav-link {
-  color: $secondary;
+  color: var(--secondary);
 
   &:hover {
-    color: $dark;
+    color: var(--dark);
   }
 }
 
@@ -92,8 +92,8 @@ aside {
   grid-gap: 24px;
 
   .card {
-    background-color: $white;
-    border: 1px solid $border;
+    background-color: var(--white);
+    border-color: var(--border);
     border-radius: 8px;
     overflow: hidden;
 
@@ -103,7 +103,6 @@ aside {
     }
 
     .card-body {
-      padding: 16px 24px;
       padding-bottom: 20px;
 
       h2 {
@@ -134,7 +133,7 @@ aside {
 
     footer {
       padding: 16px;
-      border-top: 1px solid $border;
+      border-top: 1px solid var(--border);
       gap: 16px;
     }
   }
